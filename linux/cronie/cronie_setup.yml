@@ -1,0 +1,23 @@
+---
+- name: Install cronie and configure cron job on Nautilus app servers
+  hosts: nautilus_app_servers
+  become: yes
+
+  tasks:
+    - name: Install cronie package
+      package:
+        name: cronie
+        state: present
+
+    - name: Ensure crond service is running and enabled
+      service:
+        name: crond
+        state: started
+        enabled: yes
+
+    - name: Add cron job for root user
+      cron:
+        name: "Write hello every 5 minutes"
+        user: root
+        minute: "*/5"
+        job: "echo hello > /tmp/cron_text"
