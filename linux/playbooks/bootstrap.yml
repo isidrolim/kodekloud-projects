@@ -1,0 +1,10 @@
+---
+- name: Bootstrap Nautilus servers (SSH keys)
+  hosts: nautilus_app_servers
+  gather_facts: no
+
+  tasks:
+    - name: Install SSH public key
+      authorized_key:
+        user: "{{ ansible_user }}"
+        key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
