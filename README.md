@@ -18,7 +18,7 @@ All labs are organized by technology and documented with:
 ## Repository Structure
 
 ```text
-linux Level2/
+linux Level-2/
   ├── cronie/
   │   ├── task.md
   │   ├── notes.md
