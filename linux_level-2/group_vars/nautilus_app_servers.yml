@@ -1,5 +1,8 @@
+# Cron service defaults (used only in Q1)
 cron_package: cronie
 cron_service: crond
+
+# Q1 specific
 cron_user: root
 cron_minute: "*/5"
 cron_command: "echo hello > /tmp/cron_text"
