@@ -1,7 +1,0 @@
----
-- name: KodeKloud Linux L2 - Question 01 (Create Cron Job)
-  hosts: nautilus_app_servers
-  become: yes
-
-  roles:
-    - cronjob
