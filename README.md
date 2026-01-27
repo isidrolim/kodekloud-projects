@@ -18,21 +18,20 @@ All labs are documented with:
 ## Linux Level 2 – Overview
 
 All **Linux Level 2** tasks are solved using **Ansible**.
-Each KodeKloud question is implemented as a **self-contained folder**, making it easy to
-understand, run, and verify each task independently.
 
-The focus of this repository is **learning and clarity**, not premature optimization.
+Each KodeKloud question is implemented as a **self-contained directory**, containing:
+- The Ansible playbook
+- Inventory for the task
+- Task-specific variables (if needed)
+- Documentation
+- Verification steps
+
+This structure mirrors how KodeKloud presents problems and prioritizes **clarity and learning**
+over premature optimization.
 
 ---
 
 ## Repository Structure
-
-Each Linux Level 2 question has its own directory containing:
-- The Ansible playbook
-- Inventory
-- Variables (if needed)
-- Documentation
-- Verification steps
 
 ```text
 linux_level-2/
