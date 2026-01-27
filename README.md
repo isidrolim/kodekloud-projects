@@ -35,7 +35,7 @@ over premature optimization.
 
 ```text
 linux_level-2/
-├── q01_create_cron_job/
+├── q01_create_cron_job/ - DONE
 ├── q02_linux_banner/
 ├── q03_collaborative_directories/
 ├── q04_string_substitute/
