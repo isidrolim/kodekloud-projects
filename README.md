@@ -7,7 +7,7 @@ This repository contains my hands-on practice labs from **KodeKloud**, focused o
 - Ansible automation
 - DevOps fundamentals
 
-All labs are organized by technology and documented with:
+All labs are documented with:
 - Task descriptions
 - Commands used
 - Explanations (WHY)
@@ -15,28 +15,35 @@ All labs are organized by technology and documented with:
 
 ---
 
+## Linux Level 2 – Overview
+
+All **Linux Level 2** tasks are solved using **Ansible**.
+Each KodeKloud question is implemented as a **self-contained folder**, making it easy to
+understand, run, and verify each task independently.
+
+The focus of this repository is **learning and clarity**, not premature optimization.
+
+---
+
 ## Repository Structure
 
-All Linux Level 2 labs are implemented using **Ansible** and organized in a reusable,
-production-style layout.
+Each Linux Level 2 question has its own directory containing:
+- The Ansible playbook
+- Inventory
+- Variables (if needed)
+- Documentation
+- Verification steps
 
 ```text
 linux_level-2/
-├── ansible.cfg              # Ansible configuration
-├── inventory/
-│   └── inventory.ini        # Shared inventory for Nautilus servers
-├── group_vars/
-│   └── nautilus_app_servers.yml
-├── host_vars/               # Vault-encrypted sudo credentials
-│   ├── stapp01.yml
-│   ├── stapp02.yml
-│   └── stapp03.yml
-├── playbooks/
-│   ├── bootstrap.yml        # Initial SSH bootstrap (one-time)
-│   └── q01_create-a-cronjob.yml
-├── roles/
-│   └── q01_cronjob/
-│       ├── tasks/
-│       │   └── main.yml
-│       └── README.md        # Task description, WHY, and verification
+├── q01_create_cron_job/
+│   ├── README.md       # Task description and explanation (WHY)
+│   ├── inventory.ini   # Target servers for this task
+│   ├── playbook.yml    # Ansible solution
+│   ├── vars.yml        # Task-specific variables
+│   └── verify.md       # Verification steps
+├── q02_linux_banner/
+│   └── ...
+├── q03_collaborative_directories/
+│   └── ...
 └── README.md
